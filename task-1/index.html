@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>reverse the word</h2>
+    <input type="text" id="input" placeholder="enter the sentence">
+    <button onclick="reverse()">reverse</button>
+    <p id="output"></p>
+    <script>
+        function reversed(){
+        const input = document.getElementryById("input").value
+        const reverse=input.split("")
+        .map(words=>words.split("").reverse().join("")).join("")
+        document.getElementryById("output").innerText="reversed sentence:"+reverse
+        }
+    </script>
+    
+</body>
+</html>

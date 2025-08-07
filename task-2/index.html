@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>String Methods Demo</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .method-block { margin-bottom: 20px; }
+    .method-block h3 { margin-bottom: 5px; }
+    code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; }
+  </style>
+</head>
+<body>
+  <h1>JavaScript String Methods Demo</h1>
+
+  <div class="method-block" id="length"></div>
+  <div class="method-block" id="concat"></div>
+  <div class="method-block" id="toUpperCase"></div>
+  <div class="method-block" id="toLowerCase"></div>
+  <div class="method-block" id="split"></div>
+  <div class="method-block" id="repeat"></div>
+  <div class="method-block" id="replace"></div>
+  <div class="method-block" id="replaceAll"></div>
+
+  <script>
+    const str1 = "Hello";
+    const str2 = "World";
+    const sample = "Hello, hello, hello!";
+
+    // String length
+    document.getElementById("length").innerHTML = `
+      <h3>1. String Length</h3>
+      <code>${str1}</code>.length = <strong>${str1.length}</strong>
+    `;
+
+    // String concat()
+    document.getElementById("concat").innerHTML = `
+      <h3>2. String concat()</h3>
+      <code>${str1}.concat(" ", "${str2}")</code> = <strong>${str1.concat(" ", str2)}</strong>
+    `;
+
+    // String toUpperCase()
+    document.getElementById("toUpperCase").innerHTML = `
+      <h3>3. String toUpperCase()</h3>
+      <code>${str1}.toUpperCase()</code> = <strong>${str1.toUpperCase()}</strong>
+    `;
+
+    // String toLowerCase()
+    document.getElementById("toLowerCase").innerHTML = `
+      <h3>4. String toLowerCase()</h3>
+      <code>${str1}.toLowerCase()</code> = <strong>${str1.toLowerCase()}</strong>
+    `;
+
+    // String split()
+    const sentence = "apple,banana,orange";
+    document.getElementById("split").innerHTML = `
+      <h3>5. String split()</h3>
+      <code>${sentence}.split(",")</code> = <strong>[${sentence.split(",").join(", ")}]</strong>
+    `;
+
+    // String repeat()
+    document.getElementById("repeat").innerHTML = `
+      <h3>6. String repeat()</h3>
+      <code>${str1}.repeat(3)</code> = <strong>${str1.repeat(3)}</strong>
+    `;
+
+    // String replace()
+    document.getElementById("replace").innerHTML = `
+      <h3>7. String replace()</h3>
+      <code>${sample}.replace("hello", "hi")</code> = <strong>${sample.replace("hello", "hi")}</strong>
+    `;
+
+    // String replaceAll()
+    document.getElementById("replaceAll").innerHTML = `
+      <h3>8. String replaceAll()</h3>
+      <code>${sample}.replaceAll("hello", "hi")</code> = <strong>${sample.replaceAll("hello", "hi")}</strong>
+    `;
+  </script>
+</body>
+</html>
